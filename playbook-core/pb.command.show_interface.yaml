@@ -9,10 +9,6 @@
       junipernetworks.junos.junos_command:
         commands:
           - show interfaces ge-0/0/0
-        provider:
-          port: 22
-          user: "{{ username }}"
-          passwd: "{{ password }}"
         waitfor:
           - "result[0].interface-information.physical-interface.name eq ge-0/0/0"
       register: result
