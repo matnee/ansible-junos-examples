@@ -1,4 +1,5 @@
 collections:
+- junipernetworks.junos
 # Install a collection from Ansible Galaxy.
 - name: junipernetworks.junos
 version: ">=5.0.0"
