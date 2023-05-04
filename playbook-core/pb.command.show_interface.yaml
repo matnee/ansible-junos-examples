@@ -5,7 +5,6 @@
   connection: local
   gather_facts: no
   vars:
-    provider:
     port: 22
   tasks:
     - name: Gather ge-0/0/0 interface information
