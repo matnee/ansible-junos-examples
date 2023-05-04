@@ -1,6 +1,6 @@
 ---
 - name: Gather ge-0/0/0 interface information
-  hosts: 
+  hosts:
     - all
   connection: local
   gather_facts: no
@@ -9,6 +9,9 @@
       junipernetworks.junos.junos_command:
         commands:
           - show interfaces ge-0/0/0
+        provider:
+          user: "{{ANSIBLE_NET_USERNAME}}"
+          passwd: "{{ANSIBLE_NET_PASSWORD}}"
         waitfor:
           - "result[0].interface-information.physical-interface.name eq ge-0/0/0"
       register: result
