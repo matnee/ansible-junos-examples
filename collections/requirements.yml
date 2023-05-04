@@ -1,3 +1,8 @@
+roles:
+# Install a role from Ansible Galaxy.
+  - name: junipernetworks.junos
+    version: "5.1.0" # note that ranges are not supported for roles
+
 collections:
 # Install a collection from Ansible Galaxy.
   - name: junipernetworks.junos
