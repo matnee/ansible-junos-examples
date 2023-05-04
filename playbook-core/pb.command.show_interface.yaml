@@ -9,8 +9,6 @@
       juniper.device.command:
         commands:
           - show interfaces ge-0/0/0
-        waitfor:
-          - "result[0].interface-information.physical-interface.name eq ge-0/0/0"
       register: result
 
     - debug: var=result.stdout
