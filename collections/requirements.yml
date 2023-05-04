@@ -1,2 +1,5 @@
----
-- src: junipernetworks.junos
+collections:
+# Install a collection from Ansible Galaxy.
+- name: junipernetworks.junos
+version: ">=5.0.0"
+source: https://galaxy.ansible.com
