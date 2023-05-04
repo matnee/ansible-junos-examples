@@ -10,8 +10,6 @@
         commands:
           - show interfaces ge-0/0/0
         provider:
-          user: "{{ANSIBLE_NET_USERNAME}}"
-          passwd: "{{ANSIBLE_NET_PASSWORD}}"
         waitfor:
           - "result[0].interface-information.physical-interface.name eq ge-0/0/0"
       register: result
