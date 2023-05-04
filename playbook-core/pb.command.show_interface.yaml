@@ -4,6 +4,9 @@
     - all
   connection: local
   gather_facts: no
+  vars:
+    user: "test"
+    passwd: "test"
   tasks:
     - name: Gather ge-0/0/0 interface information
       juniper.device.command:
