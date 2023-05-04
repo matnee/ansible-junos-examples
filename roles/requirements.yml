@@ -1,1 +1,1 @@
-- src: junipernetworks.junos
+- src: https://github.com/Juniper/ansible-junos-stdlib/
