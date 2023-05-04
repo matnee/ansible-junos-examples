@@ -1,3 +1,2 @@
 ---
-- name: http-role-gz 
-  src: https://github.com/Juniper/ansible-junos-stdlib/archive/2.3.1.tar.gz
+- src: junipernetworks.junos
