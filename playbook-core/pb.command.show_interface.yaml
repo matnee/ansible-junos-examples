@@ -3,11 +3,11 @@
   hosts: all
   connection: local
   roles:
-   - Juniper.junos
+   - junipernetworks.junos
   gather_facts: no
   tasks:
     - name: Gather ge-0/0/0 interface information
-      juniper_junos_command:
+      junipernetworks.junos.junos_command:
         commands:
           - show interfaces ge-0/0/0
         waitfor:
