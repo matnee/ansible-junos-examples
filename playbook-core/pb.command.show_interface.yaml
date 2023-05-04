@@ -3,8 +3,6 @@
   hosts: 
     - all
   connection: local
-  roles:
-    - junipernetworks.junos.junos_command
   gather_facts: no
   tasks:
     - name: Gather ge-0/0/0 interface information
