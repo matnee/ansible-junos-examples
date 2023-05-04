@@ -1,0 +1,20 @@
+---
+- name: Gather ge-0/0/0 interface information
+  hosts:
+    - all
+  connection: local
+  gather_facts: no
+  vars:
+    user: "{{ANSIBLE_NET_USERNAME}}"
+    passwd: "{{ANSIBLE_NET_PASSWORD}}"
+  tasks:
+    - name: Gather ge-0/0/0 interface information
+      juniper.device.rpc:
+        rpcs: "get-interface-information"
+        kwargs:
+          - interface_name: "ge-0/0/0"
+      register: result
+    - name: Print Optic Informationen
+      debug:
+        msg:
+          - Das Interface: "{{ result }}"
