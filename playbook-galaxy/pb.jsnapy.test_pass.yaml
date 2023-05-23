@@ -5,6 +5,10 @@
   gather_facts: no
   roles:
     - Juniper.junos
+  vars:
+    user: "{{ANSIBLE_NET_USERNAME}}"
+    passwd: "{{ANSIBLE_NET_PASSWORD}}"
+    
   tasks:
     - name: "TEST1 - Check Interfaces are UP"
       ignore_errors: true
