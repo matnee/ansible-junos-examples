@@ -12,9 +12,7 @@
   tasks:
     - name: "TEST1 - Check Interfaces are UP"
       ignore_errors: true
-      junos_jsnapy:
-        host: "{{ ansible_ssh_host }}"
-        port: "{{ ansible_ssh_port }}"
+      juniper.device.jsnapy:
         user: root
         passwd: Juniper
         test_files: resources/test_junos_interface.yml
@@ -25,9 +23,7 @@
 
     - name: "TEST2 - Check Available Storage"
       ignore_errors: true
-      junos_jsnapy:
-        host: "{{ ansible_ssh_host }}"
-        port: "{{ ansible_ssh_port }}"
+      juniper.device.jsnapy:
         user: root
         passwd: Juniper
         test_files: resources/test_junos_storage.yml
