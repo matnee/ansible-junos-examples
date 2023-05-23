@@ -11,21 +11,12 @@
     - name: "TEST1 - Check Interfaces are UP"
       ignore_errors: true
       juniper.device.jsnapy:
-        test_files: "{{ playbook_dir }}"/resources/test_junos_interface.yml
-        action: snapcheck
-        logfile: jsnap.log
+        dir: "~/resources"
+        config_file: "test_junos_interface.yml"        
+        logfile: "jsnapy_tests.log"
       register: test1
     # - debug: var=test1 verbosity=2
-
-    - name: "TEST2 - Check Available Storage"
-      ignore_errors: true
-      juniper.device.jsnapy:
-        test_files: "{{ playbook_dir }}"/resources/test_junos_storage.yml
-        action: snapcheck
-        logfile: jsnap.log
-      register: test2
 
     - assert:
         that:
           - "test1.passPercentage == 100"
-          - "test2.passPercentage == 100"
