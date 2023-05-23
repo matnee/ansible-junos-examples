@@ -3,8 +3,6 @@
   hosts: all
   connection: local
   gather_facts: no
-  roles:
-    - Juniper.junos
   vars:
     user: "{{ANSIBLE_NET_USERNAME}}"
     passwd: "{{ANSIBLE_NET_PASSWORD}}"
