@@ -11,6 +11,7 @@
     - name: "TEST1 - Check Interfaces are UP"
       ignore_errors: true
       juniper.device.jsnapy:
+        action: "snapcheck"
         dir: "~/resources"
         config_file: "test_junos_interface.yml"        
         logfile: "jsnapy_tests.log"
